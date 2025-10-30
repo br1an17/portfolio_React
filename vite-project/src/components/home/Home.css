@@ -1,0 +1,58 @@
+/* Estilos para el contenedor de la página Home */
+.home-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center;    /* Centrado horizontal */
+    text-align: center;
+    padding-bottom: 50px; /* Dejar espacio para los controles si los añades */
+}
+
+/* Título de Bienvenida */
+.welcome-text {
+    font-size: 2.5rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    margin-bottom: 50px;
+    animation: pulse 2s infinite alternate; /* Animación sutil */
+}
+
+/* El BOTÓN CENTRAL - ¡El foco de atención! */
+.start-button {
+    /* Base */
+    background: transparent;
+    border: 4px solid var(--neon-pink);
+    color: var(--neon-pink);
+    font-size: 2rem;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    /* El Parpadeo del Neón (Animación) */
+    box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-pink);
+    transition: box-shadow 0.3s ease-in-out;
+    animation: neon-flicker 1.5s infinite alternate; /* Parpadeo más notorio */
+}
+
+.start-button:hover {
+    color: white; /* Se ilumina completamente */
+    background-color: var(--neon-pink);
+    box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink), 0 0 80px var(--neon-pink);
+}
+
+/* Definición de la animación de Parpadeo */
+@keyframes neon-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; } /* Parpadeo suave */
+    52%, 54% { opacity: 0.2; } /* Parpadeo más rápido (Glitch) */
+}
+
+/* Texto de Créditos/Versión */
+.credit-text {
+    position: absolute;
+    bottom: 20px;
+    color: rgba(255, 255, 255, 0.3); /* Sutil, casi invisible */
+    font-size: 0.6rem;
+}

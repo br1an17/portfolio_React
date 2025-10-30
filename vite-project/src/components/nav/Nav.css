@@ -1,0 +1,35 @@
+.nav {
+    display: flex;
+    justify-content: flex-end; /* Centra los botones horizontalmente */  
+    padding: 25px 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente del panel */
+    width: 100%;
+}
+
+/* Estilos para los enlaces/botones LINK */
+.link {
+    /* 1. SEPARACIÓN Y FORMA */
+    display: inline-block; /* Crucial para aplicar margin/padding */
+    margin: 0 15px;      /* <--- ESTO SEPARA LOS BOTONES */
+    padding: 10px 20px;
+    
+    /* 2. TIPOGRAFÍA Y BASE VISUAL */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none; /* Quita el subrayado */
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out; /* Para la transición del hover */
+
+    /* 3. EFECTO NEÓN BASE (AZUL) */
+    color: var(--neon-blue);
+    border: 2px solid var(--neon-blue);
+    box-shadow: var(--neon-shadow-blue);
+}
+
+/* Efecto al pasar el ratón (se "enciende" y cambia de color) */
+.link:hover {
+    color: var(--neon-pink);
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink), 0 0 30px var(--neon-pink); /* Más brillo */
+    transform: scale(1.05);
+}

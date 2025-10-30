@@ -1,0 +1,28 @@
+/* Estilos para el contenedor principal del footer */
+.footer-container {
+    /* Posicionamiento y Layout */
+    position: fixed; /* Lo mantiene fijo en el viewport */
+    bottom: 0;       /* Lo pega al borde inferior */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 10; /* Asegura que esté sobre otros elementos */
+    
+    /* Fondo y Borde Neón */
+    background-color: var(--arcade-dark, #1a1a1d); /* Fondo oscuro */
+    border-top: 2px solid var(--neon-pink, #FF69B4); /* Una línea de neón en la parte superior */
+    box-shadow: 0 -2px 10px var(--neon-pink, #FF69B4); /* Sombra que proyecta luz hacia arriba */
+}
+
+/* Estilos para el texto de copyright */
+.footer-text {
+    font-size: 0.75rem; /* Letra pequeña y sutil */
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    
+    /* El toque de neón azul */
+    color: var(--neon-blue, #00FFFF);
+    text-shadow: 0 0 2px var(--neon-blue, #00FFFF);
+}

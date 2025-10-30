@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Nav } from "./components/nav/Nav.jsx";
+import { Header } from "./components/header/Header.jsx";
+import { Footer } from "./components/footer/Footer.jsx";
+import { Projects } from "./components/projects/Projects.jsx";
+import { Contacto } from "./components/contacto/contacto.jsx";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/home/Home.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+   
+    <div className="app-container">
+      <BrowserRouter>
+     
+      {/* <Marquee title="EL PORTFOLIO DE BRIAN" subtitle="DEV ARCADE" />  */}
+      <Nav />      
+      
+     
+      <main className="screen-container">
+          <Routes>
+              {/* Ruta Principal: Pantalla "Press Start" */}
+              <Route path="/" element={<Home />} /> 
+              
+              {/* Ruta Proyectos: Pantalla de Selección de Juego */}
+              <Route path="/projects" element={<Projects />} /> 
+              
+              {/* Ruta Sobre Mí: Pantalla de Récords/Historia */}
+              {/* <Route path="/about" element={<AboutMe />} />  */}
+              
+              {/* Ruta Contacto: Pantalla de "Game Over/Continuar?" */}
+              <Route path="/contact" element={<Contacto />} />
 
-export default App
+              {/* Ruta de Detalle de Proyecto (ejemplo) */}
+              {/* <Route path="/project/:id" element={<ProjectDetail />} /> */}
+              
+              {/* Ruta 404 - Error */}
+              <Route path="*" element={<h1>ERROR 404: JUEGO NO ENCONTRADO</h1>} />
+          </Routes>
+      </main>
+      
+      <Footer /> 
+      </BrowserRouter>
+    </div>
+  );
+}
+export default App;
