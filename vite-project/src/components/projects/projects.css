@@ -18,3 +18,52 @@
     color: rgba(255, 255, 255, 0.5);
     margin-top: 30px;
 }
+.game-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 30px; /* Espacio entre las tarjetas */
+    max-width: 900px;
+    margin: 0 auto;
+}
+.game-card {
+ 
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    border: 3px solid var(--neon-blue, #00FFFF); /* Borde inicial */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente oscuro */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+  
+    box-shadow: 0 0 8px var(--neon-blue), inset 0 0 5px var(--neon-blue);
+}
+
+
+.game-card:hover {
+   
+    border-color: var(--neon-pink, #FF69B4);
+    box-shadow: 0 0 15px var(--neon-pink), inset 0 0 10px var(--neon-pink);
+    transform: scale(1.05); 
+}
+
+
+.card-title {
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 0 0 3px var(--neon-pink);
+    margin: 5px 0;
+}
+
+.card-desc {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card-image {
+    height: 100px;
+    background-color: #333;
+    /* Aquí iría la imagen de tu proyecto, con estilo pixelado */
+    line-height: 100px;
+    color: #999;
+}

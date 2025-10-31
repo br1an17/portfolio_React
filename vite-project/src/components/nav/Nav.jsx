@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "./Nav.css";
 const Navegacion = [
   { nombre: "INICIO", path: "/" },
-  { nombre: "SOBRE MÍ", path: "/sobreMi" },
-  { nombre: "PROYECTOS", path: "/proyectos" },
+  { nombre: "SOBRE MÍ", path: "/about" },
+  { nombre: "PROYECTOS", path: "/projects" },
   { nombre: "CONTACTO", path: "/contact" },
 ];
 

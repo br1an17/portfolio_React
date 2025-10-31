@@ -1,5 +1,22 @@
 
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: #1a012a; /* Fondo muy oscuro */
-    padding: 20px 0; 
+   background-color: #1a012a;
+    font-family: 'Press Start 2P', monospace;
+    color: #fff;
+}
+
+
+.app-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }

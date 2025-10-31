@@ -1,0 +1,66 @@
+.contact-screen {
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+}
+.contact-title {
+    font-size: 2rem;
+    color: var(--neon-pink, #FF69B4);
+    text-shadow: 0 0 7px var(--neon-pink), 0 0 15px var(--neon-pink);
+    margin-bottom: 15px;
+    animation: pulse 1.5s infinite alternate; /* Animación parpadeante */
+}
+
+.contact-message {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.arcade-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo de la caja del formulario */
+    border: 2px solid var(--neon-blue, #00FFFF);
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.form-input {
+    background-color: #000;
+    color: var(--neon-pink);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    font-size: 0.9rem;
+
+    &:focus {
+        outline: none;
+        border-color: var(--neon-pink);
+        box-shadow: 0 0 5px var(--neon-pink);
+    }
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+.submit-button {
+    background-color: var(--neon-pink, #FF69B4);
+    color: #000; /* Texto oscuro sobre el botón brillante */
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px var(--neon-pink);
+    transition: all 0.2s;
+
+    &:hover {
+        opacity: 0.8;
+        transform: scale(0.98);
+    }
+}

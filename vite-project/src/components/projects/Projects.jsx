@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Para navegar a la vista de detalle
+import { Link } from 'react-router-dom'; 
+import './projects.css';
 
-// Datos Ficticios de Proyectos para el ejemplo
+
+
 const projectData = [
   { id: 1, title: 'CYBER-DEFENDER', desc: 'App de Seguridad', path: '/project/1' },
   { id: 2, title: 'PIXEL-RPG', desc: 'Sitio Web de Juego', path: '/project/2' },
